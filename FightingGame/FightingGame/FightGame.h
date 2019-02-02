@@ -9,8 +9,8 @@ struct Fighter
 	unsigned int spd;
 	unsigned int agl;
 	unsigned int hp;
-	std::string weapon;//TODO replace with enumeration of choices
-	std::string armor;//TODO replace with enumeration of choices
+	enum weapon { sword, bow };
+	enum armor {leather, plate};
 };
 
 class FightGame
@@ -19,6 +19,7 @@ public:
 	FightGame();
 	std::list<Fighter> GetFighterList();
 	void CreateFighterList();
+	Fighter CreateFighter();
 	unsigned int Initiative();
 	void Attack();
 	bool CheckWin();

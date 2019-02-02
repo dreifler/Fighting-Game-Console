@@ -14,6 +14,11 @@ void FightGame::CreateFighterList()
 {
 }
 
+Fighter FightGame::CreateFighter()
+{
+	return Fighter();
+}
+
 unsigned int FightGame::Initiative()
 {
 	return 0;
